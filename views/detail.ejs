@@ -13,3 +13,11 @@
     <p>Awards: <%= data.Awards %> </p>
     <p><%= data.Ratings[1].Source %> rating is <%= data.Ratings[1].Value %> </p>
 </div>
+
+<div>
+<form method="POST" action="/fave">
+    <input hidden type="text" name="title" id="title" value="<%= data.Title %>">
+    <input hidden type="text" name="imdbId" id="imdbId" value="<%=data.imdbID%>">
+    <button class="btn btn-primary" id="button" type="submit">Add to Favorite Movies</button>
+</form>
+</div>
